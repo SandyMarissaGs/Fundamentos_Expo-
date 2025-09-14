@@ -19,6 +19,8 @@ export const Formulario = () => {
       <TextInput style={style.input} placeholder="Ingrese el correo" keyboardType="email-address"/>
       <Text style={style.label}>Contraseña:</Text>
       <TextInput style={style.input} placeholder="**********" secureTextEntry/>
+      <Text style={style.label}>Telefono:</Text>
+      <TextInput style={style.input} placeholder="123456" keyboardType="numeric"/>
     </SafeAreaView>
   )
 }
