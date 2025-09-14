@@ -1,5 +1,15 @@
-import { Platform, Image, SafeAreaView, StatusBar, StyleSheet, View, Text, ScrollView, TouchableOpacity } from "react-native";
-import { MaterialIcons } from "@expo/vector-icons"; 
+import {
+  Platform,
+  Image,
+  SafeAreaView,
+  StatusBar,
+  StyleSheet,
+  View,
+  Text,
+  ScrollView,
+  TouchableOpacity,
+} from "react-native";
+import { MaterialIcons } from "@expo/vector-icons";
 
 export const ListaAlumnos = () => {
   return (
@@ -8,27 +18,50 @@ export const ListaAlumnos = () => {
       <View style={style.appBar}>
         <MaterialIcons name="arrow-back" size={20} color="#000" />
         <Text style={style.appBarTitle}> Lista de Usuarios</Text>
-        <View style={{width: 20}}></View>
-        </View>
+        <View style={{ width: 20 }}></View>
+      </View>
       {/*Fin de AppBar */}
       {/*Inicio de contenido (lista de alumnos) */}
-      <ScrollView style={{padding: 16}}>
+      <ScrollView style={{ padding: 16 }}>
         <Text style={style.sectionTitle}>Alumnos De Aplicaciones Moviles</Text>
 
-        {[1,2,3,4,5,6,7].map((item, index) => (
-           <View style={style.card}>
-          <Image source={{uri: "https://previews.123rf.com/images/yupiramos/yupiramos1710/yupiramos171003189/87385894-software-language-programmer-avatar-vector-illustration-design.jpg"}}style={style.avatar}/>
-          <View style={style.cardInfo}>
-            <Text style={style.userName}>Sandy Marissa</Text>
-            <Text style={style.userDetails}>Ing. Sistemas Computacionales</Text>
-            <TouchableOpacity style={style.saveButton}>
-              <Text style={style.saveButtonText}> Ver mas</Text>
-            </TouchableOpacity>
+        {[1, 2, 3, 4, 5, 6, 7].map((item, index) => (
+          <View style={style.card}>
+            <Image
+              source={{
+                uri: "https://previews.123rf.com/images/yupiramos/yupiramos1710/yupiramos171003189/87385894-software-language-programmer-avatar-vector-illustration-design.jpg",
+              }}
+              style={style.avatar}
+            />
+            <View style={style.cardInfo}>
+              <Text style={style.userName}>Sandy Marissa</Text>
+              <Text style={style.userDetails}>
+                Ing. Sistemas Computacionales
+              </Text>
+              <TouchableOpacity style={style.saveButton}>
+                <Text style={style.saveButtonText}> Ver mas</Text>
+              </TouchableOpacity>
             </View>
-        </View>
+          </View>
         ))}
       </ScrollView>
       {/*Cierre de contenido (lista de alumnos) */}
+      {/*Navbar */}
+      <View style={style.navbar}>
+        <View style={style.navItem}>
+          <MaterialIcons name="home" size={20} color="#000" />
+          <Text style={style.navText}>Inicio</Text>
+        </View>
+        <View style={style.navItem}>
+          <MaterialIcons name="save" size={20} color="#000" />
+          <Text style={style.navText}>Inicio</Text>
+        </View>
+        <View style={style.navItem}>
+          <MaterialIcons name="person" size={20} color="#000" />
+          <Text style={style.navText}>Inicio</Text>
+        </View>
+      </View>
+      {/*fin ded Navbar */}
     </SafeAreaView>
   );
 };
@@ -41,7 +74,7 @@ const style = StyleSheet.create({
     //padding: 16,
   },
   appBar: {
-    height:50,
+    height: 50,
     width: "100%",
     backgroundColor: "#ab7aeaff",
     flexDirection: "row",
@@ -97,5 +130,22 @@ const style = StyleSheet.create({
   saveButtonText: {
     color: "#0f0f0fff",
     fontWeight: "bold",
+  },
+  navbar: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "center",
+    height: 70,
+    backgroundColor: "#ab7aeaff",
+    borderTopWidth: 1,
+    //marginBottom:10,
+  },
+  navItem: {
+    alignItems: "center",
+  },
+  navText: {
+    fontSize: 12,
+    color: "#000",
+    marginTop: 4,
   },
 });
