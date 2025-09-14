@@ -11,8 +11,11 @@ import {
 export const Formulario = () => {
   return (
     <SafeAreaView style={style.mainS}>
+      <Text style={style.title}> Registro de Alumno</Text>
       <Text style={style.label}>Nombre:</Text>
       <TextInput style={style.input} placeholder="Escribe tu nombre"/>
+      <Text style={style.label}>Carrera:</Text>
+      <TextInput editable={false} style={style.input} placeholder="Escribe tu carrera"/>
       <Text style={style.label}>Descripcion:</Text>
       <TextInput multiline={true} numberOfLines={4} style={[style.input,style.textArea]} placeholder="Describe tu personalidad"/>
       <Text style={style.label}>Correo Electronico:</Text>
@@ -31,6 +34,12 @@ const style = StyleSheet.create({
     backgroundColor: "#a7f4eaff",
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 44,
     padding: 16,
+  },
+   title: {
+    fontSize: 22,
+    fontWeight: "bold",
+    marginTop: 20,
+    textAlign: "center",
   },
   label: {
     weight: "bold",
