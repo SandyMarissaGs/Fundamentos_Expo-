@@ -1,12 +1,5 @@
-import { 
-  StyleSheet, 
-  View, 
-  Platform, 
-  StatusBar, 
-  SafeAreaView, 
-  TextInput, 
-  Text 
-} from "react-native";
+import { StyleSheet, View, Platform, StatusBar, SafeAreaView, TextInput, Text, TouchableOpacity} from "react-native";
+import { MaterialIcons } from "@expo/vector-icons"; 
 
 export const Formulario = () => {
   return (
@@ -24,6 +17,10 @@ export const Formulario = () => {
       <TextInput style={style.input} placeholder="**********" secureTextEntry/>
       <Text style={style.label}>Telefono:</Text>
       <TextInput style={style.input} placeholder="123456" keyboardType="numeric"/>
+      <TouchableOpacity style={style.botonConIcono}>
+        <MaterialIcons name="send" size={20} color="#0c0c0cff" style={style.iconoIzquierda}/>
+        <Text style={style.textoBoton}>Botón Grande</Text>
+      </TouchableOpacity>
     </SafeAreaView>
   )
 }
@@ -55,5 +52,23 @@ const style = StyleSheet.create({
   textArea: {
     height: 100,
     textAlignVertical: "top",
+  },
+  botonConIcono: {
+    backgroundColor: "#eaee9fff",
+    marginTop: 10,
+    flexDirection: "row",
+    alignContent: "center",
+    justifyContent: "center",
+    paddingVertical: 12,
+    borderRadius: 15,
+  },
+  iconoIzquierda: {
+    marginRight: 10,
+  },
+   textoBoton: {
+    color: "#0f0f0fff",
+    fontWeight: "bold",
+    fontSize: 15,
+    textAlign: "center",
   },
 });
