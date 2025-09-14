@@ -21,10 +21,10 @@ export const ListaAlumnos = () => {
             <Text style={style.userDetails}>Ing. Sistemas Computacionales</Text>
             <TouchableOpacity style={style.saveButton}>
               <Text style={style.saveButtonText}> Ver mas</Text>
-
             </TouchableOpacity>
             </View>
         </View>
+        
 
       
       </ScrollView>
@@ -73,13 +73,29 @@ const style = StyleSheet.create({
     marginRight: 12,
   },
   cardInfo: {
+    flex: 1,
+    justifyContent: "center",
   },
   userName: {
+    fontWeight: "bold",
+    fontSize: 16,
+    marginBottom: 10,
   },
   userDetails: {
+    fontWeight: "bold",
+    fontSize: 14,
+    marginBottom: 10,
   },
   saveButton: {
+    backgroundColor: "#f6d2f8ff",
+    marginTop: 10,
+    padding: 10,
+    alignSelf: "flex-end",
+    paddingVertical: 6,
+    borderRadius: 15,
   },
   saveButtonText: {
+    color: "#0f0f0fff",
+    fontWeight: "bold",
   },
 });
