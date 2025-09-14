@@ -1,9 +1,9 @@
 import Ionicons from "@expo/vector-icons/FontAwesome";
 import {View,Text,StyleSheet,Platform,StatusBar,TouchableOpacity, ScrollViewBase, ScrollViewComponent, ScrollView,} from "react-native";
-import CardBasico from "../../Componets/CardBasico";
-import CardBasicoImg from "../../Componets/CardImg";
-import Cardv2 from "../../Componets/CardV2";
-import Cardv3 from "../../Componets/CardV3";
+import CardBasico from "../Componets/CardBasico";
+import CardBasicoImg from "../Componets/CardImg";
+import Cardv2 from "../Componets/CardV2";
+import Cardv3 from "../Componets/CardV3";
 
 
 export default function HomePrincipal() {
