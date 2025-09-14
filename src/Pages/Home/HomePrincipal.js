@@ -2,6 +2,7 @@ import Ionicons from "@expo/vector-icons/FontAwesome";
 import {View,Text,StyleSheet,Platform,StatusBar,TouchableOpacity,} from "react-native";
 import CardBasico from "../../Componets/CardBasico";
 import CardBasicoImg from "../../Componets/CardImg";
+import Cardv2 from "../../Componets/CardV2";
 
 
 export default function HomePrincipal() {
@@ -10,6 +11,7 @@ export default function HomePrincipal() {
          <Text style={style.title}> Pagina Principal </Text>
          <CardBasico/>
          <CardBasicoImg/>
+         <Cardv2/>
     </View>
   );
 }
