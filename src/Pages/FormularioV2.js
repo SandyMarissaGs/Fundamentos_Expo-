@@ -9,6 +9,23 @@ export const FormularioV2 = () => {
       <Text style= {style.title}>Formulario V2</Text>
       <View style={style.container}>
         <Image source={{uri:'https://previews.123rf.com/images/yupiramos/yupiramos1710/yupiramos171003189/87385894-software-language-programmer-avatar-vector-illustration-design.jpg'}} style={style.avatar}/>
+        <Text style={style.name}>Sandy Garcia</Text>
+        <View style={style.infoContainer}>
+          <Text style={style.label}> Carrera</Text>
+            <Text style={style.info}>Ing. Sistemas Computacionales</Text>
+            <Text style={style.label}> Especialidad </Text>
+            <Text style={style.info}>Desarrollo de Software</Text>
+          <Text style={style.label}> Correo </Text>
+            <Text style={style.info}>sandymarissa2004@gmail.com</Text>
+            <Text style={style.label}> Telefono </Text>
+            <Text style={style.info}>9531337079</Text>
+            <Text style={style.label}> Num. De Control </Text>
+            <Text style={style.info}>22620061</Text>
+        </View>
+        <TouchableOpacity style={style.botonConIcono}>
+                <MaterialIcons name="save" size={20} color="#0c0c0cff" style={style.iconoIzquierda}/>
+                <Text style={style.textoBoton}>Guardar</Text>
+              </TouchableOpacity>
       </View>
       </ScrollView>
     </SafeAreaView>
@@ -27,6 +44,7 @@ const style = StyleSheet.create({
     fontWeight: "bold",
     marginTop: 20,
     textAlign: "center",
+    marginBottom: 15,
   },
   container: {
     width:'100%',
@@ -48,4 +66,48 @@ const style = StyleSheet.create({
         borderWidth: 2,
         borderColor: '#000'
     },
+    name: {
+      color: '#0e0e0eff',
+      fontWeight: 'bold',
+      fontSize: 17,
+      marginBottom: 10,
+      borderRadius:20,
+      backgroundColor:'#f8a8b6ff',
+      padding:5,
+    },
+    infoContainer: {
+      width: '100%',
+      marginBottom: 15,
+    },
+    label: {
+      fontWeight: 'bold',
+      fontSize: 13,
+      marginBottom: 10,
+    },
+    info: {
+      fontSize: 13,
+      marginBottom: 10,
+      borderRadius:15,
+      backgroundColor:'#e8d5d5ff',
+      padding:10,
+    },
+    botonConIcono: {
+    backgroundColor: "#f6d2f8ff",
+    marginTop: 10,
+    flexDirection: "row",
+    alignContent: "center",
+    justifyContent: "center",
+    paddingVertical: 12,
+    borderRadius: 15,
+    width:'80%',
+  },
+  iconoIzquierda: {
+    marginRight: 10,
+  },
+   textoBoton: {
+    color: "#0f0f0fff",
+    fontWeight: "bold",
+    fontSize: 15,
+    textAlign: "center",
+  },
 });
