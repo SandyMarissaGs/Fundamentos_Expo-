@@ -14,7 +14,9 @@ export const ListaAlumnos = () => {
       {/*Inicio de contenido (lista de alumnos) */}
       <ScrollView style={{padding: 16}}>
         <Text style={style.sectionTitle}>Alumnos De Aplicaciones Moviles</Text>
-        <View style={style.card}>
+
+        {[1,2,3,4,5,6,7].map((item, index) => (
+           <View style={style.card}>
           <Image source={{uri: "https://previews.123rf.com/images/yupiramos/yupiramos1710/yupiramos171003189/87385894-software-language-programmer-avatar-vector-illustration-design.jpg"}}style={style.avatar}/>
           <View style={style.cardInfo}>
             <Text style={style.userName}>Sandy Marissa</Text>
@@ -24,9 +26,7 @@ export const ListaAlumnos = () => {
             </TouchableOpacity>
             </View>
         </View>
-        
-
-      
+        ))}
       </ScrollView>
       {/*Cierre de contenido (lista de alumnos) */}
     </SafeAreaView>
