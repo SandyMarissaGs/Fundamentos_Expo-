@@ -15,6 +15,10 @@ export const Formulario = () => {
       <TextInput style={style.input} placeholder="Escribe tu nombre"/>
       <Text style={style.label}>Descripcion:</Text>
       <TextInput multiline={true} numberOfLines={4} style={[style.input,style.textArea]} placeholder="Describe tu personalidad"/>
+      <Text style={style.label}>Correo Electronico:</Text>
+      <TextInput style={style.input} placeholder="Ingrese el correo" keyboardType="email-address"/>
+      <Text style={style.label}>Contraseña:</Text>
+      <TextInput style={style.input} placeholder="**********" secureTextEntry/>
     </SafeAreaView>
   )
 }
