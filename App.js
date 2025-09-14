@@ -4,7 +4,8 @@
 //import { Formulario } from "./src/Pages/Formulario";
 //import HomePrincipal from "./src/Pages/HomePrincipal";
 //import Home from "./src/Pages/Home/Home";
-import { FormularioV2 } from "./src/Pages/FormularioV2";
+//import { FormularioV2 } from "./src/Pages/FormularioV2";
+import { ListaAlumnos } from "./src/Pages/Lista-Alumnos/ListaAlumnos";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
     //<BotonesV2/>
     //<HomePrincipal/>
     //<Formulario/>
-    <FormularioV2/>
+    //<FormularioV2/>
+    <ListaAlumnos/>
   );
 }
 
