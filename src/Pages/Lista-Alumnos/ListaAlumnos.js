@@ -1,4 +1,4 @@
-import { Platform,  SafeAreaView, StatusBar, StyleSheet, View, Text } from "react-native";
+import { Platform, Image, SafeAreaView, StatusBar, StyleSheet, View, Text, ScrollView, TouchableOpacity } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons"; 
 
 export const ListaAlumnos = () => {
@@ -11,6 +11,24 @@ export const ListaAlumnos = () => {
         <View style={{width: 20}}></View>
         </View>
       {/*Fin de AppBar */}
+      {/*Inicio de contenido (lista de alumnos) */}
+      <ScrollView style={{padding: 16}}>
+        <Text style={style.sectionTitle}>Alumnos De Aplicaciones Moviles</Text>
+        <View style={style.card}>
+          <Image source={{uri: "https://previews.123rf.com/images/yupiramos/yupiramos1710/yupiramos171003189/87385894-software-language-programmer-avatar-vector-illustration-design.jpg"}}style={style.avatar}/>
+          <View style={style.cardInfo}>
+            <Text style={style.userName}>Sandy Marissa</Text>
+            <Text style={style.userDetails}>Ing. Sistemas Computacionales</Text>
+            <TouchableOpacity style={style.saveButton}>
+              <Text style={style.saveButtonText}> Ver mas</Text>
+
+            </TouchableOpacity>
+            </View>
+        </View>
+
+      
+      </ScrollView>
+      {/*Cierre de contenido (lista de alumnos) */}
     </SafeAreaView>
   );
 };
@@ -34,5 +52,34 @@ const style = StyleSheet.create({
   appBarTitle: {
     fontWeight: "bold",
     fontSize: 16,
+  },
+  sectionTitle: {
+    fontSize: 15,
+    fontWeight: "bold",
+    padding: 16,
+  },
+  card: {
+    padding: 16,
+    flexDirection: "row",
+    borderRadius: 16,
+    backgroundColor: "#ffffff",
+    elevation: 2,
+    marginBottom: 5,
+  },
+  avatar: {
+    width: 60,
+    height: 60,
+    borderRadius: 50,
+    marginRight: 12,
+  },
+  cardInfo: {
+  },
+  userName: {
+  },
+  userDetails: {
+  },
+  saveButton: {
+  },
+  saveButtonText: {
   },
 });
